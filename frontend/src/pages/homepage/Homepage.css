@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #d3d3d3;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+
+  row-gap: 1em;
+  column-gap: 1em;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.6em 0.5em;
+
+  background-color: #202e54;
+  grid-column: 1 / 5;
+  grid-row: span 1;
+}
+
+.nav-item > a {
+  text-decoration: none;
+  color: #9fd6ae;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list > li {
+  margin-left: 5em;
+}
+
+.nav-list > li > a {
+  text-decoration: none;
+  color: #9fd6ae;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    position: fixed;
+    left: -100%;
+    top: 5em;
+    flex-direction: column;
+    background-color: #202e54;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list.active {
+    left: 0;
+  }
+
+  .nav-list > li {
+    margin: 2.5em 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  /*Makes middle line of hamburger disappear*/
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  /*Makes top line of hamburger tilt digonally*/
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  /*Makes top line of hamburger tilt digonally*/
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+.login,
+.signup {
+  border: 0.1em solid #9fd6ae;
+  padding: 0.2em 0.2em;
+}
+
+.main-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.7em;
+
+  grid-column: 1 / 5;
+  grid-row: 2 / 4;
+
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.crosshair-img {
+  width: 15em;
+  height: 15em;
+}
+
+.welcome-text {
+  font-size: 2.5em;
+}
+
+.call-to-action {
+  color: #9fd6ae;
+  text-decoration: none;
+  border: 0.1em solid #9fd6ae;
+  font-size: 1.5em;
+  padding: 0.2em;
+}
+
+.footer-item {
+  background-color: #202e54;
+
+  grid-column: 1 / 5;
+  grid-row: 4 / 5;
+
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
