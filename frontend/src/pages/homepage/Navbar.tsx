@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Navbar(){
+function Navbar() : JSX.Element{
     const [isOpen,setIsOpen] = useState(false);
     const handleToggle = () =>{
         setIsOpen(!isOpen);
