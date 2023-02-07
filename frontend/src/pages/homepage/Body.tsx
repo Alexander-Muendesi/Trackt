@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import crosshair from './goal.png';
 
 function Body() : JSX.Element{
@@ -24,7 +25,8 @@ function Body() : JSX.Element{
                     Don't let your goals be just wishes, make them a reality. 
                     Sign up now and start taking control of your future today!
                 </p>
-                <a href="#" className='call-to-action'>SIGN UP</a>
+                {/* <a href="#" className='call-to-action'>SIGN UP</a> */}
+                <li><Link to={"signUp"} className='call-to-action'>SignUp</Link></li>
             </main>
         </>
     );

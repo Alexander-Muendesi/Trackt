@@ -137,6 +137,19 @@ body {
   padding: 0em 1em;
 }
 
+.main-item > li {
+  list-style-type: none;
+  color: #000000;
+  background-color: #03dac5;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 0.2em;
+  align-self: center;
+}
+.main-item > li > a{
+  text-decoration: none;
+}
+
 .crosshair-img {
   width: 15em;
   height: 15em;
@@ -145,15 +158,6 @@ body {
 
 .welcome-text {
   font-size: 2.5em;
-}
-
-.call-to-action {
-  color: #000000;
-  background-color: #03dac5;
-  text-decoration: none;
-  font-size: 1.5em;
-  padding: 0.2em;
-  align-self: center;
 }
 
 .footer-item {
