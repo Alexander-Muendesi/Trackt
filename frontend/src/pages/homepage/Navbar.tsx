@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar(){
     const [isOpen,setIsOpen] = useState(false);
@@ -8,13 +9,13 @@ function Navbar(){
     return(
         <>
             <nav className= "nav-item">
-                <a href="#">Trackt</a>
+                <li className="tracktText"><Link to={"/"}>Trackt</Link></li>
                 
                 {/* <ul className='nav-list'> */}
                 <ul className={`nav-list ${isOpen ? 'active' : ''}`}>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#" id='login'>Login</a></li>
-                    <li><a href="#" id='signup'>Sign Up</a></li>
+                    <li><Link to={"/features"}>Features</Link></li>
+                    <li><Link to={"Login"} id="login">Login</Link></li>
+                    <li><Link to={"signUp"} id="signup">SignUp</Link></li>
                 </ul>
 
                 {/* <div className="hamburger" onClick={handleToggle}> */}

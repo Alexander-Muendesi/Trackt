@@ -1,6 +1,6 @@
 import crosshair from './goal.png';
 
-function Body(){
+function Body() : JSX.Element{
     return(
         <>
             <main className="main-item">
