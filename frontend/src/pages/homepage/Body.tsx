@@ -5,8 +5,7 @@ function Body() : JSX.Element{
     return(
         <>
             <main className="main-item">
-                <p className='welcome-text'>Unlock your potential and turn your dreams into realities with Trackt!</p>
-
+                <h1>Unlock your potential and turn your dreams into realities with Trackt!</h1>
                 <p>
                 Our advanced goal tracking system helps you overcome obstacles and 
                 reach your full potential. Tired of setting goals and never following 

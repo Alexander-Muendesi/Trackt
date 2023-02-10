@@ -13,9 +13,9 @@ function Navbar() : JSX.Element{
                 
                 {/* <ul className='nav-list'> */}
                 <ul className={`nav-list ${isOpen ? 'active' : ''}`}>
-                    <li><Link to={"/features"}>Features</Link></li>
-                    <li><Link to={"Login"} id="login">Login</Link></li>
-                    <li><Link to={"signUp"} id="signup">SignUp</Link></li>
+                    <li><Link to={"/features" } id="features">Features</Link></li>
+                    <li><Link to={"/login"} id="login">Login</Link></li>
+                    <li><Link to={"/signUp"} id="signup">SignUp</Link></li>
                 </ul>
 
                 {/* <div className="hamburger" onClick={handleToggle}> */}
