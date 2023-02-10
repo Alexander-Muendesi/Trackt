@@ -1,0 +1,17 @@
+.feature-container{
+    display: flex;
+    align-items:flex-start;
+    flex-direction: column;
+
+    margin: 1em 1em;
+    padding: 1em 1em;
+    background-color: #121212;
+}
+
+.feature-container > p{
+    padding-bottom: 1em;
+}
+
+.feature-container > h1{
+    padding-bottom: 0.5em;
+}
