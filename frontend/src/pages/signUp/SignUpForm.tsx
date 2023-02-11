@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 
-function LoginForm() : JSX.Element{
-
-    const [username,setUsername] = useState("");
+function SignUpForm(){
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error,setError] = useState("");
 
@@ -18,34 +17,34 @@ function LoginForm() : JSX.Element{
             return;
         }
 
-        if(emailRegex.test(username) === false){
-            setError("Incorrect format for email");
+        if(emailRegex.test(email) === false){
+            setError("Email format incorrect.");
             return;
         }
-
         //Add code below to send the details to the backend somehow
 
     }
 
     return (
-        <div className="login-form-outer-container">
-            <form onSubmit={handleSubmit} className="login-form-container">
-            <h1>Login To Your Account</h1>
-        
-            <input type="text" className="login-username" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Email"/>
-            <input type="password" className="login-password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
-        
-            {error && <p className="login-error">{error}</p>}
+        <div className="signup-form-outer-container">
+            <form onSubmit={handleSubmit} className="signup-form-container">
+            <h1>Sign Up for a new account</h1>
             
-            <button type="submit">Login</button>
+            <input type="email" className="signup-name" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
+            <input type="password" className="signup-password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>
+        
+        
+            {error && <p className="signup-error">{error}</p>}
+            
+            <button type="submit">Sign Up</button>
 
             <div>
-                New Here? 
-                <Link to={"/signup"}> Sign Up Now!</Link>
+                Already have account? 
+                <Link to={"/login"}> Login Instead!</Link>
             </div>
             </form>
         </div>
     )
-};
+}
 
-export default LoginForm;
+export default SignUpForm;

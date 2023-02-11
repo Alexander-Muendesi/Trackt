@@ -1,8 +1,15 @@
+import "./SignUpPage.css";
+import Navbar from "../homepage/Navbar";
+import Footer from "../homepage/Footer";
+import SignUpForm from "./SignUpForm";
+
 function SignUpPage() : JSX.Element{
     return (
-        <div>
-            Hello SignUp Page
-        </div>
+        <>
+            <Navbar/>
+            <SignUpForm/>
+            <Footer/>
+        </>
     )
 }
 
