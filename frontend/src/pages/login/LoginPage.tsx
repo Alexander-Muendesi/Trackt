@@ -1,9 +1,15 @@
-//Note if you are returning React.Fragment or <> </> the return type is React.Fragment
+import "./LoginPage.css";
+import Footer from "../homepage/Footer";
+import Navbar from "../homepage/Navbar";
+import LoginForm from "./LoginForm";
+
 function LoginPage() : JSX.Element{
     return (
-        <div>
-            Hello Login
-        </div>
+        <>
+            <Navbar/>
+            <LoginForm/>
+            <Footer/>
+        </>
     )
 }
 
