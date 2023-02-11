@@ -28,7 +28,7 @@ function SignUpForm(){
     return (
         <div className="signup-form-outer-container">
             <form onSubmit={handleSubmit} className="signup-form-container">
-            <h1>Sign Up for a new account</h1>
+            <h1>Sign Up Now!</h1>
             
             <input type="email" className="signup-name" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email"/>
             <input type="password" className="signup-password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password"/>

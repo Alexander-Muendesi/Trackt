@@ -11,9 +11,9 @@
     background-color: #121212;
     margin-top: 1em;
 
-    min-width: 50em;
     min-height: calc(100vh - 2em); /*100vh means the whole viewport. minus 1em for margin bottom */
     margin-bottom: 2em;
+    padding: 0em 3em;
 }
 
 .signup-form-container > h1{
